@@ -1,0 +1,96 @@
+.b-footer {
+  background-color: #3b3b3b;
+  padding: 40px 30px;
+  color: $lightColor;
+
+  &__unit {
+    @include media-breakpoint-only(md) {
+      &:nth-child(n+3) {
+        margin-top: 30px;
+      }
+    }
+
+    @include media-breakpoint-only(sm) {
+      &:nth-child(n+2){
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__unit-contact-desc {
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+
+  &__unit-title {
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__quickLink {
+    display: block;
+    color: inherit;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    border-bottom: 1px solid transparentize($lightColor, 0.8);
+    padding: 10px 0;
+
+    &:hover {
+      color: $majorColor;
+    }
+  }
+
+  &__blog-title {
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  &__blog-text {
+    text-align: justify;
+  }
+
+  &__blog-more {
+    color: $majorColor;
+    display: block;
+    text-align: right;
+    padding-top: 10px;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: $lightestColor;
+    }
+  }
+
+  &__newsletter-input {
+    display: block;
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: $lightColor;
+    width: 100%;
+    border: none;
+    transition-duration: 0.5s;
+    margin-bottom: 10px;
+
+    &:focus {
+      color: $majorColor;
+      box-shadow: 0 0 0 2px $majorColor;
+    }
+  }
+
+  &__newsletter-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1f1f1f;
+    color: $majorColor;
+    text-transform: uppercase;
+    outline: none;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: $lightestColor;
+      cursor: pointer;
+    }
+  }
+}

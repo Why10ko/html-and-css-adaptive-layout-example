@@ -1,0 +1,30 @@
+.b-main-nav {
+  background-color: $majorColor;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    color: $lightestColor;
+    padding-right: 15px;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: $darkColor;
+      text-decoration: none;
+    }
+  }
+
+  &__site-search {
+    @include media-breakpoint-down(lg) {
+      margin-top: 15px;
+    }
+  }
+}
